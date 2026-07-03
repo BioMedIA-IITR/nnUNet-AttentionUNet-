@@ -24,10 +24,10 @@ nnUNetv2_train DATASET_NAME_OR_ID CONFIGURATION FOLD
 Examples:
 
 ```bash
-nnUNetv2_train DATASET_NAME_OR_ID 2d 0
-nnUNetv2_train DATASET_NAME_OR_ID 3d_fullres 0
-nnUNetv2_train DATASET_NAME_OR_ID 3d_lowres 0
-nnUNetv2_train DATASET_NAME_OR_ID 3d_cascade_fullres 0
+nnUNetv2_train DATASET_ID 2d 0 -tr nnUNetTrainerAttentionUNet
+nnUNetv2_train DATASET_ID 3d_fullres 0 -tr nnUNetTrainerAttentionUNet
+nnUNetv2_train DATASET_ID 3d_lowres 0 -tr nnUNetTrainerAttentionUNet
+nnUNetv2_train DATASET_ID 3d_cascade_fullres 0 -tr nnUNetTrainerAttentionUNet
 ```
 
 For the cascade, `3d_lowres` must be trained before `3d_cascade_fullres`.
